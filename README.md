@@ -12,19 +12,19 @@ As additional material, prepare a table with GDP, GINI coefficient, and populati
 
 ### Datasets that can be used to obtain suitable data:
 #### Primary Tables:
-czechia_payroll – Information on wages in various industries over several years. The dataset comes from the Czech Republic Open Data Portal.
-czechia_payroll_calculation – Code list of calculations in the payroll table.
-czechia_payroll_industry_branch – Code list of industry branches in the payroll table.
-czechia_payroll_unit – Code list of value units in the payroll table.
-czechia_payroll_value_type – Code list of value types in the payroll table.
-czechia_price – Information on prices of selected foods over several years. The dataset comes from the Czech Republic Open Data Portal.
-czechia_price_category – Code list of food categories included in our overview.
+**czechia_payroll** – Information on wages in various industries over several years. The dataset comes from the Czech Republic Open Data Portal.
+**czechia_payroll_calculation** – Code list of calculations in the payroll table.
+**czechia_payroll_industry_branch** – Code list of industry branches in the payroll table.
+**czechia_payroll_unit** – Code list of value units in the payroll table.
+**czechia_payroll_value_type** – Code list of value types in the payroll table.
+**czechia_price** – Information on prices of selected foods over several years. The dataset comes from the Czech Republic Open Data Portal.
+**czechia_price_category** – Code list of food categories included in our overview.
 #### Shared Information Code Lists for the Czech Republic:
-czechia_region – Code list of regions in the Czech Republic according to the CZ-NUTS 2 standard.
-czechia_district – Code list of districts in the Czech Republic according to the LAU standard.
+**czechia_region** – Code list of regions in the Czech Republic according to the CZ-NUTS 2 standard.
+**czechia_district** – Code list of districts in the Czech Republic according to the LAU standard.
 #### Additional Tables:
-countries - Various information about countries worldwide, such as the capital, currency, national food, or average population height.
-economies - GDP, GINI, tax burden, etc., for a given country and year.
+**countries** - Various information about countries worldwide, such as the capital, currency, national food, or average population height.
+**economies** - GDP, GINI, tax burden, etc., for a given country and year.
 
 ### Research Questions:
 1) Do wages increase over the years in all industries, or do some experience a decline?
@@ -34,7 +34,7 @@ economies - GDP, GINI, tax burden, etc., for a given country and year.
 5) Does the GDP level influence changes in wages and food prices? In other words, if the GDP rises significantly in a given year, does it result in a more pronounced increase in food prices or wages in the same or subsequent years?
 
 ### Project Output
-Assist your colleagues with the assigned task. The output should be two tables in the database from which the required data can be obtained. Name the tables t_{first name}{last name}project_SQL_primary_final (for data on wages and food prices for the Czech Republic unified over the same comparable period – common years) and t{first name}{last name}_project_SQL_secondary_final (for additional data on other European countries).
+Assist your colleagues with the assigned task. The output should be two tables in the database from which the required data can be obtained. Name the tables *t_{first name}{last name}project_SQL_primary_final* (for data on wages and food prices for the Czech Republic unified over the same comparable period – common years) and *t{first name}{last name}_project_SQL_secondary_final* (for additional data on other European countries).
 
 Additionally, prepare a set of SQL queries that retrieve the data needed to answer the specified research questions from the tables you have prepared. Note that the questions/hypotheses may be supported or refuted by your outputs! It depends on what the data indicates.
 
