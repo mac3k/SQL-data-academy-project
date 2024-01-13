@@ -1,4 +1,4 @@
--- 1) How much can one buy in terms of liters of milk and kilograms of bread for the first and last comparable periods in the available data on prices and wages?
+-- 2) How much can one buy in terms of liters of milk and kilograms of bread for the first and last comparable periods in the available data on prices and wages?
 
 -- Find out the first and last year in available data:
 SELECT MIN (year)
