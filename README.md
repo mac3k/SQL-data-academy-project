@@ -12,18 +12,18 @@ As additional material, prepare a table with GDP, GINI coefficient, and populati
 
 ### Datasets that can be used to obtain suitable data:
 #### Primary Tables:
-**czechia_payroll** – Information on wages in various industries over several years. The dataset comes from the Czech Republic Open Data Portal.
-**czechia_payroll_calculation** – Code list of calculations in the payroll table.
-**czechia_payroll_industry_branch** – Code list of industry branches in the payroll table.
-**czechia_payroll_unit** – Code list of value units in the payroll table.
-**czechia_payroll_value_type** – Code list of value types in the payroll table.
-**czechia_price** – Information on prices of selected foods over several years. The dataset comes from the Czech Republic Open Data Portal.
-**czechia_price_category** – Code list of food categories included in our overview.
+**czechia_payroll** – Information on wages in various industries over several years. The dataset comes from the Czech Republic Open Data Portal.<br /> 
+**czechia_payroll_calculation** – Code list of calculations in the payroll table.<br />
+**czechia_payroll_industry_branch** – Code list of industry branches in the payroll table.<br />
+**czechia_payroll_unit** – Code list of value units in the payroll table.<br />
+**czechia_payroll_value_type** – Code list of value types in the payroll table.<br />
+**czechia_price** – Information on prices of selected foods over several years. The dataset comes from the Czech Republic Open Data Portal.<br />
+**czechia_price_category** – Code list of food categories included in our overview.<br />
 #### Shared Information Code Lists for the Czech Republic:
-**czechia_region** – Code list of regions in the Czech Republic according to the CZ-NUTS 2 standard.
+**czechia_region** – Code list of regions in the Czech Republic according to the CZ-NUTS 2 standard.<br />
 **czechia_district** – Code list of districts in the Czech Republic according to the LAU standard.
 #### Additional Tables:
-**countries** - Various information about countries worldwide, such as the capital, currency, national food, or average population height.
+**countries** - Various information about countries worldwide, such as the capital, currency, national food, or average population height.<br />
 **economies** - GDP, GINI, tax burden, etc., for a given country and year.
 
 ### Research Questions / Tasks:
@@ -34,13 +34,13 @@ As additional material, prepare a table with GDP, GINI coefficient, and populati
 5) Does the GDP level influence changes in wages and food prices? In other words, if the GDP rises significantly in a given year, does it result in a more pronounced increase in food prices or wages in the same or subsequent years?
 
 ### Project Output
-Assist your colleagues with the assigned task. The output should be two tables in the database from which the required data can be obtained. Name the tables *t_{first name}{last name}project_SQL_primary_final* (for data on wages and food prices for the Czech Republic unified over the same comparable period – common years) and *t{first name}{last name}_project_SQL_secondary_final* (for additional data on other European countries).
-Additionally, prepare a set of SQL queries that retrieve the data needed to answer the specified research questions from the tables you have prepared. Note that the questions/hypotheses may be supported or refuted by your outputs! It depends on what the data indicates.
+Assist your colleagues with the assigned task. The output should be two tables in the database from which the required data can be obtained. Name the tables *t_{first name}{last name}project_SQL_primary_final* (for data on wages and food prices for the Czech Republic unified over the same comparable period – common years) and *t{first name}{last name}_project_SQL_secondary_final* (for additional data on other European countries).<br />
+Additionally, prepare a set of SQL queries that retrieve the data needed to answer the specified research questions from the tables you have prepared. Note that the questions/hypotheses may be supported or refuted by your outputs! It depends on what the data indicates.<br />
 Create a repository on your GitHub account (can be private) where you will store all project-related information – especially the SQL script generating the final table, a description of interim results (accompanying document), and information about output data (e.g., where values are missing, etc.).
 
 ## Analysis
 Based on the terms of reference and research questions, the availability, organization and quality of data in the corresponding primary and additional tables were verified. The project was created in DBeaver software.
-The relationships between the tables were identified using, among others, the ER Diagram function.
+The relationships between the tables were identified using, among others, the ER Diagram function.<br />
 It was also examined how to join the data between the tables czechia_payroll and czechia_price. It was concluded that the most appropriate time unit for clarity and project results will be 1 year.
 
 ## Steps
@@ -63,22 +63,22 @@ To find out how GDP affects wage and price developments, it is necessary to link
 I used the view 'v_GDP_changes_influence' to create a briefer overview of GDP development and its effect on prices and wages. Using CASE, I created the conditions and commented the results directly in the table. Data from the primary and secondary table were used.
 ## Outputs
 #### 1) Do wages increase over the years in all industries, or do some experience a decline?
-Based on the data, the average annual wage fell in at least one year compared to the previous year in 15 industries (A Zemědělství, lesnictví, rybářství, B	Těžba a dobývání, D	Výroba a rozvod elektřiny, plynu, tepla a klimatiz. vzduchu, E	Zásobování vodou; činnosti související s odpady a sanacemi, F	Stavebnictví, G	Velkoobchod a maloobchod; opravy a údržba motorových vozidel, I	Ubytování, stravování a pohostinství, J	Informační a komunikační činnosti, K	Peněžnictví a pojišťovnictví, L	Činnosti v oblasti nemovitostí, M	Profesní, vědecké a technické činnosti, N	Administrativní a podpůrné činnosti, O	Veřejná správa a obrana; povinné sociální zabezpečení, P	Vzdělávání, R	Kulturní, zábavní a rekreační činnosti). However, there are also 4 sectors where salaries are increasing year on year (C	Zpracovatelský průmysl, H	Doprava a skladování, Q	Zdravotní a sociální péče, S	Ostatní činnosti).
+Based on the data, the average annual wage fell in at least one year compared to the previous year in 15 industries:<br /> (A Zemědělství, lesnictví, rybářství, B	Těžba a dobývání, D	Výroba a rozvod elektřiny, plynu, tepla a klimatiz. vzduchu, E	Zásobování vodou; činnosti související s odpady a sanacemi, F	Stavebnictví, G	Velkoobchod a maloobchod; opravy a údržba motorových vozidel, I	Ubytování, stravování a pohostinství, J	Informační a komunikační činnosti, K	Peněžnictví a pojišťovnictví, L	Činnosti v oblasti nemovitostí, M	Profesní, vědecké a technické činnosti, N	Administrativní a podpůrné činnosti, O	Veřejná správa a obrana; povinné sociální zabezpečení, P	Vzdělávání, R	Kulturní, zábavní a rekreační činnosti).<br /> However, there are also 4 sectors where salaries are increasing year on year (C	Zpracovatelský průmysl, H	Doprava a skladování, Q	Zdravotní a sociální péče, S	Ostatní činnosti).
 #### 2) How much can one buy in terms of liters of milk and kilograms of bread for the first and last comparable periods in the available data on prices and wages?
-A person with an average salary of 20754 CZK in 2006 could buy 1287 of kg of Chléb konzumní kmínový.
-A person with an average salary of 20754 CZK in 2006 could buy 1437 of l of Mléko polotučné pasterované.
-A person with an average salary of 32536 CZK in 2018 could buy 1342 of kg of Chléb konzumní kmínový.
-A person with an average salary of 32536 CZK in 2018 could buy 1642 of l of Mléko polotučné pasterované.
+A person with an average salary of 20754 CZK in 2006 could buy 1287 of kg of Chléb konzumní kmínový.<br />
+A person with an average salary of 20754 CZK in 2006 could buy 1437 of l of Mléko polotučné pasterované.<br />
+A person with an average salary of 32536 CZK in 2018 could buy 1342 of kg of Chléb konzumní kmínový.<br />
+A person with an average salary of 32536 CZK in 2018 could buy 1642 of l of Mléko polotučné pasterované.<br />
 #### 3) Which food category experiences the slowest price increase (lowest percentage year-on-year growth)?
-Based on the data, there are 4 food categories, where the average price increase for the examined period was even negative:
-Rajská jablka červená kulatá	117101	-3.81 %
-Cukr krystalový	118101	-3.48 %
-Konzumní brambory	117401	-0.22 %
-Pečivo pšeničné bílé	111303	-0.11 %
+Based on the data, there are 4 food categories, where the average price increase for the examined period was even negative:<br />
+Rajská jablka červená kulatá	117101	-3.81 %<br />
+Cukr krystalový	118101	-3.48 %<br />
+Konzumní brambory	117401	-0.22 %<br />
+Pečivo pšeničné bílé	111303	-0.11 %<br />
 #### 4) Is there a year in which the year-on-year increase in food prices is significantly higher than the growth in wages (greater than 10%)?
-I calculated the differences in year-on-year percentage changes in food prices and wages. For none of the examined years (period 2006 - 2018) was not identified a difference higher than 10%. The biggest difference was in 2013:
+I calculated the differences in year-on-year percentage changes in food prices and wages. For none of the examined years (period 2006 - 2018) was not identified a difference higher than 10%. The biggest difference was in 2013.<br />
 The difference between average food prices and wages in 2013 compared to the previous year was 6.4 %.
 #### 5) Does the GDP level influence changes in wages and food prices? In other words, if the GDP rises significantly in a given year, does it result in a more pronounced increase in food prices or wages in the same or subsequent years?
-I found that in some years it can be stated that the year-on-year change in GDP had an effect (direct or indirect) on the change in salaries and food prices. The year-on-year trend in average prices closely follows the trend in GDP in 2007, 2009, 2010, 2014 and 2018. The year-on-year trend in average wages closely follows the trend in GDP in 2007, 2010, 2011, 2013, 2014, 2016 and 2017.
+I found that in some years it can be stated that the year-on-year change in GDP had an effect (direct or indirect) on the change in salaries and food prices. <br />The year-on-year trend in average **prices** closely follows the trend in GDP in 2007, 2009, 2010, 2014 and 2018. <br />The year-on-year trend in average **wages** closely follows the trend in GDP in 2007, 2010, 2011, 2013, 2014, 2016 and 2017.
 
 
