@@ -54,7 +54,7 @@ In order to find out how salaries evolved in each sector, it was necessary to JO
 #### Task 2 (Q2)
 First, I used the MIN and MAX functions to find the oldest and newest year in the data from the primary table. Next, I found out how much bread and milk (food codes 111301, 114201) employees can buy in 2006 and 2018 by each industry sector. I used the ROUND, AVG, and WHERE conditions and further commented on the results using CONCAT. Data from the primary table were used.
 #### Task 3 (Q3)
-In order to find out how prices evolved, it was necessary to JOIN the primary table on primarytable with the condition 'a.year = b.year + 1'. I then calculated the percentage year-on-year difference as a new column 'yearly_pct_price_change' and selected other suitable columns. From this SELECT I created the view 'v_yearly_pct_price_change'. To find out the food category name with the lowest price change during the period (2006 - 2018) I used the created view and sorted the results by ascending according to avg_price_change. Data from the primary table were used.
+In order to find out how prices of food evolved, it was necessary to JOIN the primary table on primarytable with the condition 'a.year = b.year + 1'. I then calculated the percentage year-on-year difference as a new column 'yearly_pct_price_change' and selected other suitable columns. From this SELECT I created the view 'v_yearly_pct_price_change'. To find out the food category name with the lowest price change during the period (2006 - 2018) I used the created view and sorted the results by ascending according to avg_price_change. Data from the primary table were used.
 #### Task 4 (Q4)
 First it was necessary to prepare separate selections for prices and payroll. For (i) prices, I calculated the average price, used LEFT JOIN to join the primary table so that I could add the previous year's prices with the condition 'a.year = b.year + 1', and then calculated the average annual percentage change in the price of food. For payroll (ii), I had to calculate the average wage, using LEFT JOIN to join the primary table so that I could add the wages from the previous year with the condition 'a.year = b.year + 1' and further calculate the average annual percentage change in wages. I used LEFT JOIN to join selects (i) and (ii) based on a common year.
 From this I created a view 'v_food_prices_yearly_growth', which I further used to answer the question. Data from the primary table were used.
@@ -63,9 +63,22 @@ To find out how GDP affects wage and price developments, it is necessary to link
 I used the view 'v_GDP_changes_influence' to create a briefer overview of GDP development and its effect on prices and wages. Using CASE, I created the conditions and commented the results directly in the table. Data from the primary and secondary table were used.
 ## Outputs
 #### 1) Do wages increase over the years in all industries, or do some experience a decline?
-
+Based on the data, the average annual wage fell in at least one year compared to the previous year in 15 industries (A Zemědělství, lesnictví, rybářství, B	Těžba a dobývání, D	Výroba a rozvod elektřiny, plynu, tepla a klimatiz. vzduchu, E	Zásobování vodou; činnosti související s odpady a sanacemi, F	Stavebnictví, G	Velkoobchod a maloobchod; opravy a údržba motorových vozidel, I	Ubytování, stravování a pohostinství, J	Informační a komunikační činnosti, K	Peněžnictví a pojišťovnictví, L	Činnosti v oblasti nemovitostí, M	Profesní, vědecké a technické činnosti, N	Administrativní a podpůrné činnosti, O	Veřejná správa a obrana; povinné sociální zabezpečení, P	Vzdělávání, R	Kulturní, zábavní a rekreační činnosti). However, there are also 4 sectors where salaries are increasing year on year (C	Zpracovatelský průmysl, H	Doprava a skladování, Q	Zdravotní a sociální péče, S	Ostatní činnosti).
 #### 2) How much can one buy in terms of liters of milk and kilograms of bread for the first and last comparable periods in the available data on prices and wages?
-
+A person with an average salary of 20754 CZK in 2006 could buy 1287 of kg of Chléb konzumní kmínový.
+A person with an average salary of 20754 CZK in 2006 could buy 1437 of l of Mléko polotučné pasterované.
+A person with an average salary of 32536 CZK in 2018 could buy 1342 of kg of Chléb konzumní kmínový.
+A person with an average salary of 32536 CZK in 2018 could buy 1642 of l of Mléko polotučné pasterované.
 #### 3) Which food category experiences the slowest price increase (lowest percentage year-on-year growth)?
+Based on the data, there are 4 food categories, where the average price increase for the examined period was even negative:
+Rajská jablka červená kulatá	117101	-3.81 %
+Cukr krystalový	118101	-3.48 %
+Konzumní brambory	117401	-0.22 %
+Pečivo pšeničné bílé	111303	-0.11 %
 #### 4) Is there a year in which the year-on-year increase in food prices is significantly higher than the growth in wages (greater than 10%)?
+I calculated the differences in year-on-year percentage changes in food prices and wages. For none of the examined years (period 2006 - 2018) was not identified a difference higher than 10%. The biggest difference was in 2013:
+The difference between average food prices and wages in 2013 compared to the previous year was 6.4 %.
 #### 5) Does the GDP level influence changes in wages and food prices? In other words, if the GDP rises significantly in a given year, does it result in a more pronounced increase in food prices or wages in the same or subsequent years?
+I found that in some years it can be stated that the year-on-year change in GDP had an effect (direct or indirect) on the change in salaries and food prices. The year-on-year trend in average prices closely follows the trend in GDP in 2007, 2009, 2010, 2014 and 2018. The year-on-year trend in average wages closely follows the trend in GDP in 2007, 2010, 2011, 2013, 2014, 2016 and 2017.
+
+
