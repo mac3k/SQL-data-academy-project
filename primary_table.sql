@@ -1,4 +1,5 @@
--- MAIN MASTER TABLE:
+-- primary table script
+
 CREATE TABLE IF NOT EXISTS t_marcel_sufcak_project_SQL_primary_final AS
 SELECT year
 	,industry_name
@@ -34,12 +35,10 @@ FROM (
 	    WHERE
 	        unit_code = 200
 	        AND industry_branch_code IS NOT NULL
+	        AND cp.value_type_code = 5958
 	    GROUP BY payroll_year, industry_branch_code
 		) b 
 	ON a.year = b.payroll_year;
 
 SELECT *
 FROM t_marcel_sufcak_project_SQL_primary_final;
-
-
-
