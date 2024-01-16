@@ -1,3 +1,4 @@
+-- discord name: marcel.suf
 -- primary table script
 CREATE TABLE IF NOT EXISTS t_marcel_sufcak_project_SQL_primary_final AS
 SELECT year
