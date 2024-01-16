@@ -1,6 +1,6 @@
--- 3) Which food category experiences the slowest price increase (lowest percentage year-on-year growth)?
+-- Task 3: Which food category experiences the slowest price increase (lowest percentage year-on-year growth)?
 
-
+-- Create view of percent. change:
 CREATE VIEW v_yearly_pct_price_change AS (
 SELECT a.year
 	,a.category_name 
@@ -16,7 +16,7 @@ LEFT JOIN t_marcel_sufcak_project_sql_primary_final b
 GROUP BY a.cat_code, a.year
 );
 
--- To find out the food category name with the lowet price change during the period (2006 - 2018):
+-- To find out the food category name with the lowest price change during the period (2006 - 2018):
 SELECT category_name
 	,cat_code
 	,ROUND(AVG(yearly_pct_price_change), 2) AS avg_price_change
