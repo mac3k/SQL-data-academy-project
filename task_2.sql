@@ -5,7 +5,8 @@ WITH min_max_years AS (
 	SELECT 
 		MIN (year) AS min_year,
 		MAX (year) AS max_year
-	FROM t_marcel_sufcak_project_SQL_primary_final)
+	FROM t_marcel_sufcak_project_SQL_primary_final
+	)
 SELECT base.*,
 	ROUND(industry_avg_payroll_value / category_avg_value_price, 0) AS available_entity
 FROM t_marcel_sufcak_project_SQL_primary_final base
@@ -19,7 +20,8 @@ WITH min_max_years AS (
 	SELECT 
 		MIN (year) AS min_year,
 		MAX (year) AS max_year
-	FROM t_marcel_sufcak_project_SQL_primary_final) 
+	FROM t_marcel_sufcak_project_SQL_primary_final
+	) 
 SELECT `year`, 
 	ROUND(AVG(industry_avg_payroll_value), 2) AS avg_payroll_all_industries,
 	industry_pay_unit,
