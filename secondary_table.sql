@@ -16,4 +16,5 @@ SELECT e.country
 FROM economies e
 LEFT JOIN countries c 
 	USING (country)
-WHERE continent ='Europe');
+WHERE continent ='Europe'
+);
