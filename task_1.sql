@@ -2,8 +2,7 @@
 
 -- Create a view using CTE WITH:
 CREATE VIEW v_task_1_wages AS
-WITH task_1_wages AS 
-	(
+WITH task_1_wages AS (
 	SELECT a.year,
 		a.industry_name,
 		a.industry_code,
