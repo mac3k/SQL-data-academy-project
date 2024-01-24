@@ -32,7 +32,7 @@ LEFT JOIN (
 		AND a.year = b.year + 1
 	GROUP BY a.year) payroll
 ON prices.year = payroll.year
-	);
+);
 
 -- To show and order the results from the created view to answer the question: 
 SELECT `year`,	
